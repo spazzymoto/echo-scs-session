@@ -49,12 +49,12 @@ func main() {
 
 	e := echo.New()
 
-	e.Use(middleware.Session(sessionManager))
+	// Use the LoadAndSave() middleware.
+	e.Use(session.LoadAndSave(sessionManager))
 
 	e.GET("/put", putHandler)
 	e.GET("/get", getHandler)
 
-	// Wrap your handlers with the LoadAndSave() middleware.
 	e.Logger.Fatal(e.Start(":4000"))
 }
 

@@ -1,4 +1,4 @@
-package middleware
+package session
 
 import (
 	"net/http"
@@ -24,7 +24,7 @@ func TestSession(t *testing.T) {
 	rec := httptest.NewRecorder()
 	c := e.NewContext(req, rec)
 
-	session := Session(sessionManager)
+	session := LoadAndSave(sessionManager)
 
 	h := session(func(c echo.Context) error {
 		sessionManager.Put(c.Request().Context(), "message", "Hello from a session!")

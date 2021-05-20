@@ -1,4 +1,4 @@
-package middleware
+package session
 
 import (
 	"net/http"
@@ -18,14 +18,14 @@ var DefaultSessionConfig = SessionConfig{
 	Skipper: middleware.DefaultSkipper,
 }
 
-func Session(sessionManager *scs.SessionManager) echo.MiddlewareFunc {
+func LoadAndSave(sessionManager *scs.SessionManager) echo.MiddlewareFunc {
 	c := DefaultSessionConfig
 	c.SessionManager = sessionManager
 
-	return SessionWithConfig(c)
+	return LoadAndSaveWithConfig(c)
 }
 
-func SessionWithConfig(config SessionConfig) echo.MiddlewareFunc {
+func LoadAndSaveWithConfig(config SessionConfig) echo.MiddlewareFunc {
 
 	if config.Skipper == nil {
 		config.Skipper = DefaultSessionConfig.Skipper
