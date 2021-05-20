@@ -37,7 +37,7 @@ import (
 
 	"github.com/alexedwards/scs/v2"
 	"github.com/labstack/echo/v4"
-	"github.com/spazzymoto/echo-scs-session/middleware"
+	"github.com/spazzymoto/echo-scs-session"
 )
 
 var sessionManager *scs.SessionManager
