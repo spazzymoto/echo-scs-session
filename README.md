@@ -1,5 +1,9 @@
 # Echo SCS Session Middleware
 
+[![GoDoc](https://godoc.org/github.com/spazzymoto/echo-scs-session?status.png)](https://pkg.go.dev/github.com/spazzymoto/echo-scs-session?tab=doc)
+[![Go report card](https://goreportcard.com/badge/github.com/spazzymoto/echo-scs-session)](https://goreportcard.com/report/github.com/spazzymoto/echo-scs-session)
+[![Test coverage](http://gocover.io/_badge/github.com/spazzymoto/echo-scs-session)](https://gocover.io/github.com/spazzymoto/echo-scs-session)
+
 All credit must go to [alexedwards](https://github.com/alexedwards) for his great package [scs](https://github.com/alexedwards/scs)
 
 ## Features (As per [SCS](https://github.com/alexedwards/scs))
