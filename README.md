@@ -25,7 +25,7 @@ All credit must go to [alexedwards](https://github.com/alexedwards) for his grea
 
 ### Installation
 
-This package requires Go 1.24 or newer.
+This package requires Go 1.26 or newer.
 
 ```
 $ go get github.com/wainuiomata/echo-scs-session
